@@ -1,22 +1,22 @@
 // When YES is clicked
 function startParty() {
-  // Hide the start div
+  // Hide start page
   document.getElementById("start").classList.add("hidden");
 
-  // Show the party div
+  // Show party section
   const partyDiv = document.getElementById("party");
   partyDiv.classList.remove("hidden");
 
-  // Start fireworks
+  // Start fireworks/confetti
   startFireworks();
 
-  // Zoom in the birthday text after 0.5s
+  // Animate text
   const h1 = partyDiv.querySelector("h1");
   setTimeout(() => {
     h1.classList.add("show-text");
   }, 500);
 
-  // Zoom in the photo after 1s
+  // Animate photo
   const img = partyDiv.querySelector("img");
   setTimeout(() => {
     img.classList.add("show-photo");
@@ -28,7 +28,7 @@ function notYou() {
   alert("😂 Haha nice try! If you are NOT the birthday boy, this place is not for you 😏");
 }
 
-// Simple fireworks placeholder (we'll make colorful next)
+// Fireworks/confetti
 function startFireworks() {
   const duration = 5 * 1000; // 5 seconds
   const animationEnd = Date.now() + duration;
@@ -42,4 +42,9 @@ function startFireworks() {
     }
 
     const particleCount = 50 * (timeLeft / duration);
-    confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random(), y: Math.random
+    confetti(Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: Math.random(), y: Math.random() * 0.6 }
+    }));
+  }, 250);
+}
