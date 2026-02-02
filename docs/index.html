@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Happy Birthday Nischay! 🎉</title>
+  <!-- Load confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,14 +11,16 @@
 
 <canvas id="fireworks"></canvas>
 
+<!-- Start page -->
 <div id="start">
   <h1>🎂 Are you the birthday boy? 🎂</h1>
   <button onclick="startParty()">YES 🎉</button>
   <button onclick="notYou()">NO 😏</button>
 </div>
 
+<!-- Party page -->
 <div id="party" class="hidden">
-  <h1 class="boom">🎆 HAPPY BIRTHDAY to my favorite boy, NISCHAYYYYYY! 🎆</h1>
+  <h1>🎆 HAPPY BIRTHDAY to my favorite boy, NISCHAYYYYYY! 🎆</h1>
   <img src="../photos/nischay.jpeg" alt="Nischay" class="birthday-photo">
 </div>
 
