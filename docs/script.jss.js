@@ -30,9 +30,16 @@ function notYou() {
 
 // Simple fireworks placeholder (we'll make colorful next)
 function startFireworks() {
-  const canvas = document.getElementById("fireworks");
-  canvas.style.display = "block";
-  
-  // For now, simple text in console
-  console.log("Fireworks started!");
-}
+  const duration = 5 * 1000; // 5 seconds
+  const animationEnd = Date.now() + duration;
+  const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10 };
+
+  const interval = setInterval(function() {
+    const timeLeft = animationEnd - Date.now();
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+
+    const particleCount = 50 * (timeLeft / duration);
+    confetti(Object.assign({}, defaults, { particleCount, origin: { x: Math.random(), y: Math.random
