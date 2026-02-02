@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<div id="start">
+  <h1>🎂 Are you the birthday boy? 🎂</h1>
+  <button onclick="startParty()">YES 🎉</button>
+  <button onclick="notYou()">NO 😏</button>
+</div>
+
+<div id="party" class="hidden">
+  <h1 class="boom">🎆 HAPPY BIRTHDAY 🎆</h1>
+  <p>Let’s cut the cake!</p>
+
+  <h3>Answer correctly to cut the cake 🎂</h3>
+  <p>What is 7 + 6?</p>
+  <input id="answer">
+  <button onclick="cutCake()">Submit</button>
+  <h2 id="cakeResult"></h2>
+
+  <h2>💖 Best Wishes</h2>
+  <p>May your life be full of happiness and cake 🍰</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
